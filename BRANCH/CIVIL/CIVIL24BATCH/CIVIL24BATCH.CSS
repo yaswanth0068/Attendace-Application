@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Andalé Mono, monospace;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search Bar Styles */
+.search-container {
+    margin-bottom: 20px;
+    margin: 50px;
+    margin-top: 100px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Student Card Styles */
+
+
+
+
+button{
+   padding:10px;
+    min-width:160px;
+}
+
+
+.card-img-top{
+    max-width: 100px;
+    max-height: 120px;
+    border-radius: 10px;
+}
+.student-card:hover {
+    transform: scale(1.02);
+}
+
+.student-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.student-info {
+    font-size: 1rem;
+    color: #495057;
+    margin: 5px 0;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.contact-buttons .btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-buttons .btn:hover:not(.button-disabled) {
+    background-color: #0056b3;
+}
+
+.button-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #6c757d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .student-card {
+        padding: 15px;
+    }
+
+    .student-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .student-name {
+        font-size: 1.25rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .contact-buttons {
+        flex-direction: row;
+    }
+
+    .contact-buttons .btn {
+        width: calc(50% - 10px); /* Two buttons per row with space in between */
+    }
+}
+
+
+.student-card {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    border-radius: 20px; /* Curved borders for the card */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Light shadow */
+    margin-bottom: 15px; /* Space between cards */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    max-height:min-content;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.info {
+    display: flex;
+    text-align: center; 
+    justify-content: left;
+    margin-top: 20px;
+
+}
+
+.image-div {
+    flex: 0 0 auto; /* Prevents the image from growing or shrinking */
+    margin-right: 40px; /* Adds space between image and text container */
+    border-radius: 50%;
+}
+
+.text-container {
+    flex: 1; /* Allows the text container to take up the remaining space */
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Set width if needed */
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.card-img-top {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-title{
+    margin-right: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width:100px;
+    overflow: hidden;
+    color:#0275d8;
+} .card-text {
+    margin-right: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width:100px;
+    overflow: auto;
+}
+
+
+.card-body {
+    flex: 0 0 auto; /* Prevent card body from growing or shrinking */
+    padding: 15px; /* Space inside the card body */
+    align-items: center;
+}
+
+.btn {
+    margin-top: 5px; /* Space between buttons */
+}
+
+.button-disabled {
+    opacity: 0.5; /* Style for disabled buttons */
+    cursor: not-allowed; /* Cursor style for disabled buttons */
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: space-between; /* Space out items if needed */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row; /* Arrange button groups horizontally */
+    width: 100%;
+}
+
+.student-buttons, .parent-buttons {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically within each group */
+    margin-right: 20px; /* Space between button groups */
+}
+
+.student-buttons button, .parent-buttons button {
+    margin-bottom: 10px; /* Space between buttons */
+}
